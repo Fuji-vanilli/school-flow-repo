@@ -1,0 +1,19 @@
+server:
+  port: 9200
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://ixml:1234@mongodb-user:27019/CLASS-DB?authSource=admin
+
+  security:
+    oauth2:
+      resourceServer:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/utopis-realm
+          jwk-set-url: ${spring.security.oauth2.resourceServer.jwt.issuer-uri}/protocol/openid-connect/certs
+
+jwt:
+  oauth2:
+    resource-id: utopis-client
+    principal-attribute: preferred_name
