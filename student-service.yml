@@ -1,5 +1,5 @@
 server:
-  port: 9100
+  port: 9400
 
 eureka:
   client:
@@ -9,16 +9,16 @@ eureka:
 spring:
   data:
     mongodb:
-      uri: mongodb://ixml:1234@mongodb-user:27017/USER-DB?authSource=admin
+      uri: mongodb://ixml:1234@mongodb-user:27017/STUDENT-DB?authSource=admin
 
   security:
     oauth2:
       resourceServer:
         jwt:
-          issuer-uri: http://localhost:8080/realms/utopis-realm
+          issuer-uri: http://localhost:8080/realms/school-flow-realm
           jwk-set-url: ${spring.security.oauth2.resourceServer.jwt.issuer-uri}/protocol/openid-connect/certs
 
 jwt:
   oauth2:
-    resource-id: utopis-client
+    resource-id: school-flow-client
     principal-attribute: preferred_name
