@@ -9,7 +9,7 @@ eureka:
 spring:
   data:
     mongodb:
-      uri: mongodb://ixml:1234@mongodb-user:27017/COURSE-DB?authSource=admin
+      uri: mongodb://ixml:1234@mongodb-user:27020/COURSE-DB?authSource=admin
 
   security:
     oauth2:
