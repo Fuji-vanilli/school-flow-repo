@@ -22,3 +22,8 @@ jwt:
   oauth2:
     resource-id: school-flow-client
     principal-attribute: preferred_name
+
+image:
+  storage:
+    local:
+      directory: /home/fuji/PROJECT/school-flow/front-ui/school-flow-ui/src/assets
